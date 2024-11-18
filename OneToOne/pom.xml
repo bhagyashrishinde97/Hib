@@ -1,0 +1,143 @@
+<!--&lt;!&ndash;<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&ndash;&gt;-->
+<!--&lt;!&ndash;  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">&ndash;&gt;-->
+<!--&lt;!&ndash;  <modelVersion>4.0.0</modelVersion>&ndash;&gt;-->
+<!--  <project xmlns="http://maven.apache.org/POM/4.0.0"-->
+<!--           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+
+<!--    <modelVersion>4.0.0</modelVersion>-->
+<!--    <groupId>org.example</groupId>-->
+<!--    <artifactId>hibernate-jpa-example</artifactId>-->
+<!--    <version>1.0-SNAPSHOT</version>-->
+
+<!--    <properties>-->
+<!--      <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--      <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--    </properties>-->
+
+<!--    <dependencies>-->
+<!--      &lt;!&ndash; Hibernate Core dependency &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>org.hibernate</groupId>-->
+<!--        <artifactId>hibernate-core</artifactId>-->
+<!--        <version>5.6.15.Final</version> &lt;!&ndash; Use the latest stable version if possible &ndash;&gt;-->
+<!--      </dependency>-->
+
+<!--      &lt;!&ndash; MySQL Connector dependency &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>mysql</groupId>-->
+<!--        <artifactId>mysql-connector-java</artifactId>-->
+<!--        <version>8.0.31</version> &lt;!&ndash; Use a version compatible with your MySQL server &ndash;&gt;-->
+<!--      </dependency>-->
+
+<!--      &lt;!&ndash; JPA API dependency &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>jakarta.persistence</groupId>-->
+<!--        <artifactId>jakarta.persistence-api</artifactId>-->
+<!--        <version>2.2.3</version> &lt;!&ndash; Or use a JPA version compatible with Hibernate &ndash;&gt;-->
+<!--      </dependency>-->
+
+<!--      &lt;!&ndash; Logging dependencies for Hibernate &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>org.jboss.logging</groupId>-->
+<!--        <artifactId>jboss-logging</artifactId>-->
+<!--        <version>3.4.3.Final</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.logging.log4j</groupId>-->
+<!--        <artifactId>log4j-api</artifactId>-->
+<!--        <version>2.17.2</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.logging.log4j</groupId>-->
+<!--        <artifactId>log4j-core</artifactId>-->
+<!--        <version>2.17.2</version>-->
+<!--      </dependency>-->
+<!--    </dependencies>-->
+
+<!--    <build>-->
+<!--      <plugins>-->
+<!--        &lt;!&ndash; Compiler plugin to specify Java version &ndash;&gt;-->
+<!--        <plugin>-->
+<!--          <groupId>org.apache.maven.plugins</groupId>-->
+<!--          <artifactId>maven-compiler-plugin</artifactId>-->
+<!--          <version>3.8.1</version>-->
+<!--          <configuration>-->
+<!--            <source>${maven.compiler.source}</source>-->
+<!--            <target>${maven.compiler.target}</target>-->
+<!--          </configuration>-->
+<!--        </plugin>-->
+<!--      </plugins>-->
+<!--    </build>-->
+<!--  </project>-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>hibernate-jpa-postgresql</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Hibernate Core dependency -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.15.Final</version>
+        </dependency>
+
+        <!-- PostgreSQL Connector dependency -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.5</version>
+        </dependency>
+
+        <!-- javax.persistence API dependency -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!-- Logging dependencies for Hibernate and application logs -->
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.4.3.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.17.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compiler plugin to specify Java version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
